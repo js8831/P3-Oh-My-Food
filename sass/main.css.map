@@ -1,0 +1,16 @@
+{
+    "version": 3,
+    "mappings": ";ACAA,mBAAmB;ACAnB,AAAA,CAAC,CAAC;EACE,UAAU,EAAE,UAAU;CACzB;;ACFD,AAAA,IAAI,CAAC;EACD,WAAW,EAAE,yCAGH;EAEV,WAAW,EAAE,sDAIH;CACb;;AIXD,AAAA,MAAM,CAAC;EACH,gBAAgB,ENGN,OAAO;CMFpB;;APKD,yBAAyB",
+    "sources": [
+        "main.scss",
+        "utils/_variables.scss",
+        "base/_base.scss",
+        "base/_typography.scss",
+        "components/_buttons.scss",
+        "layouts/_header.scss",
+        "layouts/_nav.scss",
+        "layouts/_footer.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

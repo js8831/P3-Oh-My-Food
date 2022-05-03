@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/* Les variables */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: 'Shrikhand', cursive, Arial, Helvetica, sans-serif;
+}
+
+footer {
+  background-color: #353535;
+}
+
+/* Attention à l'ordre */
+/*# sourceMappingURL=main.css.map */
