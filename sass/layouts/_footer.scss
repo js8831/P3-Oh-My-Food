@@ -1,22 +1,30 @@
 .footer {
     background-color: $footer-color;
-    padding: 20px;
+    padding: 25px;
+
+    &__title {
+        color: white;
+        margin: 0px;
+        /* il y avait une margin initiale */
+        padding-bottom: 20px;
+    }
 
     &__list {
         list-style: none;
         color: white;
         padding-left: 0px;
         margin: 0;
+        /* il y avait une margin initiale */
     }
 
     &__items {
         padding: 0px 0px 10px 0px;
+        /* a revoir s'il faut pas -- */
     }
 
-    &__title {
+    a {
+        text-decoration: none;
         color: white;
-        margin: 0px;
-        padding-bottom: 20px;
     }
 
     @media (min-width:768px) {}
