@@ -1,0 +1,38 @@
+.nav {
+    background-color: rgb(246, 246, 246);
+
+    &__logo {
+        display: block;
+        width: 170px;
+        height: auto;
+        margin: auto;
+        padding: 20px 0px 10px 0px;
+
+        &__shadow {
+            display: block;
+            /* pour mettre des bordures */
+            box-shadow: 0px 2px 5px 0px #CFCFCF;
+        }
+    }
+
+    &__search__bar {}
+
+    &__search__space {
+        border: none;
+        background: none;
+        display: block;
+        margin: auto;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 25px;
+        font-weight: 800;
+    }
+
+    &__description {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+    }
+}
