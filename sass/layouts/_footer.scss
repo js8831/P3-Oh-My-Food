@@ -5,7 +5,7 @@
     &__title {
         color: white;
         margin: 0px;
-        /* il y avait une margin initiale */
+        /* il y avait une margin initiale c'est dû a quoi ? */
         padding-bottom: 20px;
     }
 
@@ -14,7 +14,6 @@
         color: white;
         padding-left: 0px;
         margin: 0;
-        /* il y avait une margin initiale */
     }
 
     &__items {
@@ -36,10 +35,21 @@
         .fa-handshake-angle {
             font-size: small;
             width: 14px;
+            /* ::before dans inspecter ?? */
         }
     }
 
-    @media (min-width:768px) {}
+    @media (min-width:768px) {
+        .footer {
+            &__title {
+                text-align: center;
+            }
+
+            &__list {
+                text-align: center;
+            }
+        }
+    }
 
     @media (min-width:992px) {}
 
