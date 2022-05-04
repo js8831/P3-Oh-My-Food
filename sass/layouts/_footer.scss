@@ -19,12 +19,23 @@
 
     &__items {
         padding: 0px 0px 10px 0px;
-        /* a revoir s'il faut pas -- */
-    }
+        &__link {
+            display: flex;
+            align-items: center;
 
-    a {
-        text-decoration: none;
-        color: white;
+            p {
+                margin: 0px 0px 0px 10px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .fa-handshake-angle {
+            font-size: small;
+        }
     }
 
     @media (min-width:768px) {}
