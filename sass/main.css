@@ -1,18 +1,49 @@
 @charset "UTF-8";
-/* Les variables */
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
-  font-family: 'Shrikhand', cursive, Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
-footer {
+.footer__title {
+  font-family: "Shrikhand", "cursive", Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+.footer {
   background-color: #353535;
+  padding: 25px;
 }
-
-/* Attention à l'ordre */
-/*# sourceMappingURL=main.css.map */
+.footer__title {
+  color: white;
+  margin: 0px;
+  /* il y avait une margin initiale */
+  padding-bottom: 20px;
+}
+.footer__list {
+  list-style: none;
+  color: white;
+  padding-left: 0px;
+  margin: 0;
+  /* il y avait une margin initiale */
+}
+.footer__items {
+  padding: 0px 0px 10px 0px;
+}
+.footer__items__link {
+  display: flex;
+  align-items: center;
+}
+.footer__items__link p {
+  margin: 0px 0px 0px 10px;
+}
+.footer__items a {
+  text-decoration: none;
+  color: white;
+}
+.footer__items .fa-handshake-angle {
+  font-size: small;
+}
+/* Attention à l'ordre dans main scss (à revoir). *//*# sourceMappingURL=main.css.map */
