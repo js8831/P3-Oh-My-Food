@@ -1,125 +1,145 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oh my food</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="sass/normalize.css" />
-    <link rel="stylesheet" href="sass/main.css">
+    <link rel="stylesheet" href="sass/main.css" />
 
     <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap"
+    />
 
     <!-- FA -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<body>
-<!-- Header -->
+  <body>
+    <!-- Header -->
     <header>
-        <nav class="nav">
-            <a href="#" class="nav__logo__shadow">
-                <img src="../img/logo/ohmyfood.png" alt="Logo Ohmyfood" class="nav__logo">
-            </a>
-            <form class="nav__search__bar">
-                <i class="fa-solid fa-location-dot"></i>
-                <input type="search" value="Paris, Belleville" class="nav__search__space" />
-            </form>
-            <h1 class="nav__title">Réservez le menu qui vous convient</h1>
-            <p class="nav__description">Découvrez des restaurants d'exception, séléctionnées par nos soins.</p>
-            <button class="button">
-                Explorer nos restaurants
-            </button>
-        </nav>
+      <nav class="nav">
+        <a href="#" class="nav__logo__shadow">
+          <img
+            src="../img/logo/ohmyfood.png"
+            alt="Logo Ohmyfood"
+            class="nav__logo"
+          />
+        </a>
+        <form class="nav__search__bar">
+          <i class="fa-solid fa-location-dot"></i>
+          <input
+            type="search"
+            value="Paris, Belleville"
+            class="nav__search__space"
+          />
+        </form>
+        <h1 class="nav__title">Réservez le menu qui vous convient</h1>
+        <p class="nav__description">
+          Découvrez des restaurants d'exception, séléctionnées par nos soins.
+        </p>
+        <button class="button">Explorer nos restaurants</button>
+      </nav>
     </header>
 
     <main>
-<!-- Functions -->
-<section class="functions"></section>
+      <!-- Functions -->
+      <section class="functions"></section>
 
-<!-- Restaurants-->
-<section class="restaurant">
-    <h2 class="restaurant__title">Restaurants</h2>
-    <article class="restaurant__card">
-        <a href="#">
-            <img src="img\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût"
-                class="restaurant__photo">
+      <!-- Restaurants-->
+      <section class="restaurant">
+        <h2 class="restaurant__title">Restaurants</h2>
+        <article class="restaurant__card">
+          <a href="#">
+            <img
+              src="img\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+              alt="La palette du goût"
+              class="restaurant__photo"
+            />
             <div class="restaurant__description">
-                <h3 class="restaurant__name">La palette du goût</h3>
-                <h4 class="restaurant__neighbourhood">Ménilmontant</h4>
+              <h3 class="restaurant__name">La palette du goût</h3>
+              <h4 class="restaurant__neighbourhood">Ménilmontant</h4>
             </div>
-        </a>
+          </a>
         </article>
-<article class="restaurant__card">
-    <a href="">
-        <img src="img\restaurants\stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée" class="restaurant__photo">
-        <div class="restaurant__description">
-            <h3 class="restaurant__name">La note enchantée</h3>
-            <h4 class="restaurant__neighbourhood">Charonne</h4>
-        </div>
-        </a>
+        <article class="restaurant__card">
+          <a href="">
+            <img
+              src="img\restaurants\stil-u2Lp8tXIcjw-unsplash.jpg"
+              alt="La note enchantée"
+              class="restaurant__photo"
+            />
+            <div class="restaurant__description">
+              <h3 class="restaurant__name">La note enchantée</h3>
+              <h4 class="restaurant__neighbourhood">Charonne</h4>
+            </div>
+          </a>
         </article>
-<article class="restaurant__card">
-    <a href="">
-                    <img src="img\restaurants\toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française"
-                        class="restaurant__photo">
-                    <div class="restaurant__description">
-                        <h3 class="restaurant__name">À la française</h3>
-                        <h4 class="restaurant__neighbourhood">Cité Rouge</h4>
-                    </div>
-                    </a>
-                    </article>
-            <article class="restaurant__card">
-                <a href="">
-                    <img src="img\restaurants\louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                        alt="Le délice des sens" class="restaurant__photo">
-                    <div class="restaurant__description">
-                        <h3 class="restaurant__name">Le délice des sens</h3>
-                        <h4 class="restaurant__neighbourhood">Folie-Méricourt</h4>
-                    </div>
-                    </a>
-                    </article>
-                    </section>
-                    </main>
+        <article class="restaurant__card">
+          <a href="">
+            <img
+              src="img\restaurants\toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+              alt="À la française"
+              class="restaurant__photo"
+            />
+            <div class="restaurant__description">
+              <h3 class="restaurant__name">À la française</h3>
+              <h4 class="restaurant__neighbourhood">Cité Rouge</h4>
+            </div>
+          </a>
+        </article>
+        <article class="restaurant__card">
+          <a href="">
+            <img
+              src="img\restaurants\louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+              alt="Le délice des sens"
+              class="restaurant__photo"
+            />
+            <div class="restaurant__description">
+              <h3 class="restaurant__name">Le délice des sens</h3>
+              <h4 class="restaurant__neighbourhood">Folie-Méricourt</h4>
+            </div>
+          </a>
+        </article>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <h3 class="footer__title">ohmyfood</h3>
-        <ul class="footer__list">
-            <li class="footer__items">
-                <a href="#" class="footer__items__link">
-                    <i class="fas fa-utensils"></i>
-                    <p>Proposer un restaurant</p>
-                </a>
-            </li>
-            <li class="footer__items">
-                <a href="#" class="footer__items__link">
-                    <i class="fa-solid fa-handshake-angle"></i>
-                    <p>Devenir partenaire</p>
-                </a>
-            </li>
-            <li class="footer__items">
-                <a href="#">
-                    Mentions légales
-                </a>
-            </li>
-            <li class="footer__items">
-                <a href="#">
-                    Contact
-                </a>
-            </li>
-        </ul>
+      <h3 class="footer__title">ohmyfood</h3>
+      <ul class="footer__list">
+        <li class="footer__items">
+          <a href="#" class="footer__items__link">
+            <i class="fas fa-utensils"></i>
+            <p>Proposer un restaurant</p>
+          </a>
+        </li>
+        <li class="footer__items">
+          <a href="#" class="footer__items__link">
+            <i class="fa-solid fa-handshake-angle"></i>
+            <p>Devenir partenaire</p>
+          </a>
+        </li>
+        <li class="footer__items">
+          <a href="#"> Mentions légales </a>
+        </li>
+        <li class="footer__items">
+          <a href="#"> Contact </a>
+        </li>
+      </ul>
     </footer>
-
-</body>
-
+  </body>
 </html>
