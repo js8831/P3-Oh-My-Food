@@ -1,13 +1,17 @@
 .function{
- padding: 0px 20px;
+ padding: 35px 20px 40px 20px;
  display: flex;
  flex-direction: column;
+
+    &__title{
+        margin:25px 0px 25px 0px;
+    }
     &__list{
         display:flex;
         align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
         background-color: $background-main-page;
-        border-radius: 15px;
+        border-radius: 25px;
         box-shadow: 0px 7px 10px $shadow;
         &:hover{
             background-color: $color-primary;
@@ -31,7 +35,8 @@
         color:grey;
     }
     &__description{
-        margin: 25px 0px;
+        margin: 30px 0px;
+        font-size: 16px;
         font-weight: 700;
     }
 }
