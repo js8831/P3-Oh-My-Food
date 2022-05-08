@@ -6,7 +6,7 @@
     color: white;
     font-size: 16px;
     font-weight: 500;
-    background-color: $color-primary;
+    background:linear-gradient($color-secondary,$color-primary);
     padding: 16px 22px;
-    
+    cursor: pointer;
 }
