@@ -1,5 +1,5 @@
 .function{
- padding: 25px 20px 40px 20px;
+ padding: 25px 20px 40px 30px;
  display: flex;
  flex-direction: column;
 
@@ -19,6 +19,8 @@
         }
     }
     &__number{
+        position: relative;
+        left: -10px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -31,7 +33,7 @@
     }
     &__fa{
         font-size: large;
-        margin:0px 20px;
+        margin:0px 20px 0px 10px;
         color:grey;
     }
     &__description{
