@@ -12,10 +12,10 @@
     margin-bottom: 20px;
   }
 
-  &__new{
+  &__new {
     position: absolute;
-    top:12px;
-    right:12px;
+    top: 12px;
+    right: 12px;
     font-size: 14px;
     font-weight: 600;
     border-radius: 2px;
@@ -69,5 +69,21 @@
     border-radius: 0px 0px 14px 0px;
     font-size: x-large;
     box-shadow: 7px 7px 10px 0px $shadow;
+  }
+  @media (min-width: 768px) {
+    .restaurant {
+      &__title{
+        text-align: center;
+      }
+      &__card {
+        width: 40%;
+        margin: 10px;
+      }
+      &__container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
   }
 }
