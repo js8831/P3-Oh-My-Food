@@ -1,44 +1,58 @@
-.function{
- padding: 25px 20px 40px 30px;
- display: flex;
- flex-direction: column;
+.function {
+  padding: 25px 20px 40px 30px;
+  display: flex;
+  flex-direction: column;
 
-    &__title{
-        margin:25px 0px 25px 0px;
+  &__title {
+    margin: 25px 0px 25px 0px;
+    @media (min-width: 768px) {
+      text-align: center;
     }
-    &__list{
-        display:flex;
-        align-items: center;
-        margin-bottom: 25px;
-        background-color: $background-main-page;
-        border-radius: 25px;
-        box-shadow: 0px 7px 10px $shadow;
-        &:hover{
-            background-color: $color-primary;
-
-        }
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    background-color: $background-main-page;
+    border-radius: 25px;
+    box-shadow: 0px 7px 10px $shadow;
+    &:hover {
+      background-color: $color-primary;
     }
-    &__number{
-        position: relative;
-        left: -10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $color-primary;
-        width:23px;
-        height: 23px;
-        border-radius: 20px;
-        color: white;
-        font-size: 13px;
+  }
+  &__number {
+    position: relative;
+    left: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-primary;
+    width: 23px;
+    height: 23px;
+    border-radius: 20px;
+    color: white;
+    font-size: 13px;
+  }
+  &__fa {
+    font-size: large;
+    width: 18px;
+    margin: 0px 20px 0px 10px;
+    color: grey;
+  }
+  &__description {
+    margin: 30px 0px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  @media (min-width: 768px) {
+    .function {
+      &__list {
+        width: 50%;
+        /* a revoir */
+        max-width: 400px;
+        margin: auto;
+        margin-bottom: 20px;
+      }
     }
-    &__fa{
-        font-size: large;
-        margin:0px 20px 0px 10px;
-        color:grey;
-    }
-    &__description{
-        margin: 30px 0px;
-        font-size: 16px;
-        font-weight: 700;
-    }
+  }
 }

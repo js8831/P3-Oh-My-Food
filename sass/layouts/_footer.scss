@@ -1,55 +1,60 @@
 .footer {
-    background-color: $background-footer;
-    padding: 25px;
+  background-color: $background-footer;
+  padding: 25px;
 
-    &__title {
-        color: white;
-        margin: 0px;
-        /* il y avait une margin initiale c'est dû a quoi ? */
-        padding-bottom: 20px;
+  &__title {
+    color: white;
+    margin: 0px;
+    /* il y avait une margin initiale c'est dû a quoi ? */
+    padding-bottom: 20px;
+  }
+
+  &__list {
+    list-style: none;
+    color: white;
+    padding-left: 0px;
+    margin: 0;
+  }
+
+  &__items {
+    padding: 0px 0px 10px 0px;
+    &__link {
+      display: flex;
+      align-items: center;
+
+      p {
+        margin: 0px 0px 0px 10px;
+      }
     }
 
-    &__list {
-        list-style: none;
-        color: white;
-        padding-left: 0px;
-        margin: 0;
+    a {
+      color: white;
     }
 
-    &__items {
-        padding: 0px 0px 10px 0px;
-        &__link {
-            display: flex;
-            align-items: center;
-
-            p {
-                margin: 0px 0px 0px 10px;
-            }
-        }
-
-        a {
-            color: white;
-        }
-
-        .fa-handshake-angle {
-            font-size: small;
-            width: 14px;
-            /* ::before dans inspecter ?? */
-        }
+    .fa-handshake-angle {
+      font-size: small;
+      width: 14px;
+      /* ::before dans inspecter ?? */
     }
+  }
 
-    @media (min-width:768px) {
-        .footer {
-            &__title {
-                text-align: center;
-            }
+  @media (min-width: 768px) {
+    .footer {
+      &__title {
+        text-align: center;
+      }
 
-            &__list {
-                text-align: center;
-            }
-        }
+      &__list {
+        text-align: center;
+      }
+      &__items{
+          &__link{
+              justify-content: center;
+          }
+      }
     }
+  }
 
-    @media (min-width:992px) {}
-
-    }
+  @media (min-width: 992px) {
+  }
+}
