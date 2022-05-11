@@ -12,6 +12,13 @@ img {
   display: block;
 }
 
+/* Les pages de menus */
+.main-bloc {
+  padding: 0px 10px;
+  border: 2px solid black;
+  border-radius: 35px 35px 0px 0px;
+}
+
 html {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
@@ -19,6 +26,12 @@ html {
 .footer__title {
   font-family: "Shrikhand", "cursive", Arial, Helvetica, sans-serif;
   font-weight: 100;
+}
+
+.restaurant__name {
+  font-family: "Shrikhand", "cursive", Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 27px;
 }
 
 .button {
@@ -37,16 +50,16 @@ html {
 .nav {
   background-color: rgb(246, 246, 246);
 }
-.nav__logo {
+.nav__logo-link {
+  display: block;
+  /* pour mettre des bordures */
+  box-shadow: 0px 2px 10px 0px rgb(192, 192, 192);
+}
+.nav__logo-link__image {
   display: block;
   width: 170px;
   margin: auto;
   padding: 20px 0px 10px 0px;
-}
-.nav__logo__link {
-  display: block;
-  /* pour mettre des bordures */
-  box-shadow: 0px 2px 10px 0px rgb(192, 192, 192);
 }
 .nav__search__bar {
   background-color: rgb(236, 236, 236);
@@ -62,6 +75,7 @@ html {
   font-weight: 700;
   background: none;
   width: 135px;
+  margin-left: 25px;
 }
 .nav__text {
   padding: 25px 0px 60px 0px;
@@ -103,6 +117,14 @@ html {
 .function__list:hover {
   background-color: #9356DC;
 }
+@media (min-width: 768px) {
+  .function__list {
+    width: 50%;
+    max-width: 400px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+}
 .function__number {
   position: relative;
   left: -10px;
@@ -127,16 +149,8 @@ html {
   font-size: 16px;
   font-weight: 700;
 }
-@media (min-width: 768px) {
-  .function .function__list {
-    width: 50%;
-    /* a revoir */
-    max-width: 400px;
-    margin: auto;
-    margin-bottom: 20px;
-  }
-}
 
+/* ACCUEIL */
 .restaurant {
   padding: 40px 20px;
   background-color: rgb(246, 246, 246);
@@ -144,10 +158,73 @@ html {
 .restaurant__title {
   margin: 10px 0px 20px 0px;
 }
+@media (min-width: 768px) {
+  .restaurant__title {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .restaurant__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 .restaurant__card {
   position: relative;
   border-radius: 14px;
   margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .restaurant__card {
+    width: 40%;
+    margin: 10px;
+  }
+}
+@media (min-width: 992px) {
+  .restaurant__card {
+    width: 20%;
+  }
+}
+.restaurant__card__photo {
+  width: 100%;
+  height: 180px;
+  border-radius: 14px 14px 0px 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.restaurant__card__description {
+  display: flex;
+}
+.restaurant__card__description__fa {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 0px 0px 14px 0px;
+  font-size: x-large;
+  box-shadow: 7px 7px 10px 0px rgb(230, 230, 230);
+}
+.restaurant__card__description__text {
+  width: 80%;
+  padding: 17px 0px;
+  background-color: white;
+  border-radius: 0px 0px 0px 14px;
+  box-shadow: 0px 7px 10px 0px rgb(230, 230, 230);
+}
+.restaurant__card__description__text__name {
+  font-size: 18px;
+  font-weight: 800;
+  padding-bottom: 2px;
+}
+.restaurant__card__description__text__neighbourhood {
+  font-weight: 400;
+}
+.restaurant__card__description__text__name, .restaurant__card__description__text__neighbourhood {
+  margin: 0;
+  padding-left: 15px;
+  font-size: 17px;
 }
 .restaurant__new {
   position: absolute;
@@ -160,59 +237,21 @@ html {
   color: rgb(20, 149, 117);
   background-color: #99E2D0;
 }
-.restaurant__photo {
-  width: 100%;
-  height: 180px;
-  border-radius: 14px 14px 0px 0px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.restaurant__description {
+
+/* LES AUTRES PAGES */
+.starter__card {
   display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
 }
-.restaurant__text {
-  width: 80%;
-  padding: 17px 0px;
-  background-color: white;
-  border-radius: 0px 0px 0px 14px;
-  box-shadow: 0px 7px 10px 0px rgb(230, 230, 230);
+.starter__card__description__name {
+  margin: 0px;
 }
-.restaurant__name, .restaurant__neighbourhood {
-  margin: 0;
-  padding-left: 15px;
-  font-size: 17px;
+.starter__card__description__ingredients {
+  margin: 0px;
 }
-.restaurant__name {
-  font-size: 18px;
-  font-weight: 800;
-  padding-bottom: 2px;
-}
-.restaurant__neighbourhood {
-  font-weight: 400;
-}
-.restaurant__fa {
-  width: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  border-radius: 0px 0px 14px 0px;
-  font-size: x-large;
-  box-shadow: 7px 7px 10px 0px rgb(230, 230, 230);
-}
-@media (min-width: 768px) {
-  .restaurant .restaurant__title {
-    text-align: center;
-  }
-  .restaurant .restaurant__card {
-    width: 40%;
-    margin: 10px;
-  }
-  .restaurant .restaurant__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.starter__card__description__fa {
+  display: none;
 }
 
 .footer {
@@ -222,8 +261,12 @@ html {
 .footer__title {
   color: white;
   margin: 0px;
-  /* il y avait une margin initiale c'est dû a quoi ? */
   padding-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .footer__title {
+    text-align: center;
+  }
 }
 .footer__list {
   list-style: none;
@@ -231,33 +274,33 @@ html {
   padding-left: 0px;
   margin: 0;
 }
-.footer__items {
+@media (min-width: 768px) {
+  .footer__list {
+    text-align: center;
+  }
+}
+.footer__list__items {
   padding: 0px 0px 10px 0px;
 }
-.footer__items__link {
+.footer__list__items__link {
   display: flex;
   align-items: center;
 }
-.footer__items__link p {
-  margin: 0px 0px 0px 10px;
+@media (min-width: 768px) {
+  .footer__list__items__link {
+    justify-content: center;
+  }
 }
-.footer__items a {
-  color: white;
-}
-.footer__items .fa-handshake-angle {
+.footer__list__items__link .fa-handshake-angle {
   font-size: small;
   width: 14px;
   /* ::before dans inspecter ?? */
 }
-@media (min-width: 768px) {
-  .footer .footer__title {
-    text-align: center;
-  }
-  .footer .footer__list {
-    text-align: center;
-  }
-  .footer .footer__items__link {
-    justify-content: center;
-  }
+.footer__list__items__link p {
+  margin: 0px 0px 0px 10px;
 }
+.footer__list__items a {
+  color: white;
+}
+
 /* Attention à l'ordre dans main scss (à revoir). *//*# sourceMappingURL=main.css.map */
