@@ -5,8 +5,10 @@
   &__title {
     color: white;
     margin: 0px;
-    /* il y avait une margin initiale c'est dû a quoi ? */
     padding-bottom: 20px;
+    @media (min-width: 768px) {
+      text-align: center;
+    }
   }
 
   &__list {
@@ -14,47 +16,32 @@
     color: white;
     padding-left: 0px;
     margin: 0;
-  }
-
-  &__items {
-    padding: 0px 0px 10px 0px;
-    &__link {
-      display: flex;
-      align-items: center;
-
-      p {
-        margin: 0px 0px 0px 10px;
-      }
+    @media (min-width: 768px) {
+      text-align: center;
     }
+    &__items {
+      padding: 0px 0px 10px 0px;
+      &__link {
+        display: flex;
+        align-items: center;
+        @media (min-width: 768px) {
+          justify-content: center;
+        }
 
-    a {
-      color: white;
-    }
+        .fa-handshake-angle {
+          font-size: small;
+          width: 14px;
+          /* ::before dans inspecter ?? */
+        }
 
-    .fa-handshake-angle {
-      font-size: small;
-      width: 14px;
-      /* ::before dans inspecter ?? */
-    }
-  }
-
-  @media (min-width: 768px) {
-    .footer {
-      &__title {
-        text-align: center;
+        p {
+          margin: 0px 0px 0px 10px;
+        }
       }
 
-      &__list {
-        text-align: center;
-      }
-      &__items{
-          &__link{
-              justify-content: center;
-          }
+      a {
+        color: white;
       }
     }
-  }
-
-  @media (min-width: 992px) {
   }
 }
