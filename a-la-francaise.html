@@ -31,9 +31,11 @@
   <body>
     <!-- Header -->
     <header>
-      <nav class="nav">
-        <i class="fa-solid fa-arrow-left"></i>
-        <a href="index.html" class="nav__logo-link">
+      <nav class="nav--modifier">
+        <a href="index.html" class="back-logo">
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <a href="index.html" class="nav__logo-link--modifier">
           <img
             src="../img/logo/ohmyfood.png"
             alt="Logo Ohmyfood"
@@ -45,27 +47,26 @@
 
     <main>
       <!-- Background Image -->
-      <section>
+      <section class="background-container">
         <img
           src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
           alt="À la française"
-          style="width: 100%"
+          class="background-container__img"
         />
       </section>
 
       <div class="main-bloc">
-
-        <!-- Main Title -->
-        <div class="">
-          <h1 class="restaurant__name">À la française</h1>
-          <div class="">
+        <!-- Restaurant Title -->
+        <div class="restaurant-title">
+          <h1 class="restaurant-title__name">À la française</h1>
+          <div class="restaurant-title__fa">
             <i class="fa-regular fa-heart"></i>
           </div>
         </div>
-        
+
         <!-- Starters -->
         <section class="starter">
-          <h2 class="starter-title">ENTRÉES</h2>
+          <h2 class="starter-title"><span class="underline">ENTR</span>ÉES</h2>
           <article class="starter__card">
             <div class="starter__card__description">
               <h3 class="starter__card__description__name">
@@ -80,26 +81,122 @@
               <i class="fa-solid fa-circle-check"></i>
             </div>
           </article>
-          <div>
-            <h3>Velouté de légumes d'antan</h3>
-            <p>Carotte, panais, topinambour</p>
-          </div>
-          <div>
-            <h3>Soupe à l'oignon</h3>
-            <p>Revisitée</p>
-          </div>
+          <article class="starter__card">
+            <div class="starter__card__description">
+              <h3 class="starter__card__description__name">
+                Velouté de légumes d'antan
+              </h3>
+              <p class="starter__card__description__ingredients">
+                Carotte, panais, topinambour
+              </p>
+            </div>
+            <p class="starter__card__description__price">35€</p>
+            <div class="starter__card__description__fa">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </article>
+          <article class="starter__card">
+            <div class="starter__card__description">
+              <h3 class="starter__card__description__name">Soupe à l'oignon</h3>
+              <p class="starter__card__description__ingredients">Revisitée</p>
+            </div>
+            <p class="starter__card__description__price">20€</p>
+            <div class="starter__card__description__fa">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </article>
         </section>
 
         <!-- Dishs -->
         <section>
-          <h2 class="dish">PLATS</h2>
+          <h2 class="starter-title"><span class="underline">PLAT</span>S</h2>
+          <article class="starter__card">
+            <div class="starter__card__description">
+              <h3 class="starter__card__description__name">
+                Coquilles Saint-Jacques
+              </h3>
+              <p class="starter__card__description__ingredients">
+                Accompagnées d'une purée de panais
+              </p>
+            </div>
+            <p class="starter__card__description__price">40€</p>
+            <div class="starter__card__description__fa">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </article>
+          <article class="starter__card">
+            <div class="starter__card__description">
+              <h3 class="starter__card__description__name">Magret de canard</h3>
+              <p class="starter__card__description__ingredients">
+                Et parmentier de pommes de terre
+              </p>
+            </div>
+            <p class="starter__card__description__price">35€</p>
+            <div class="starter__card__description__fa">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </article>
+          <article class="starter__card">
+            <div class="starter__card__description">
+              <h3 class="starter__card__description__name">
+                Pigeonneau d’Ille-et-Vilaine
+              </h3>
+              <p class="starter__card__description__ingredients">
+                Sur son lit de gnocchis aux légumes
+              </p>
+            </div>
+            <p class="starter__card__description__price">44€</p>
+            <div class="starter__card__description__fa">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </article>
         </section>
 
         <!-- Desserts -->
         <section>
-          <h2 class="dessert">DESSERTS</h2>
+          <h2 class="starter-title"><span class="underline">DESS</span>ERTS</h2>
+          <article class="starter__card">
+            <div class="starter__card__description">
+              <h3 class="starter__card__description__name">
+                Pétales de violettes glacés
+              </h3>
+              <p class="starter__card__description__ingredients">
+                Et purée de noisettes
+              </p>
+            </div>
+            <p class="starter__card__description__price">18€</p>
+            <div class="starter__card__description__fa">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </article>
+          <article class="starter__card">
+            <div class="starter__card__description">
+              <h3 class="starter__card__description__name">
+                Fondant au chocolat
+              </h3>
+              <p class="starter__card__description__ingredients">Revisité</p>
+            </div>
+            <p class="starter__card__description__price">22€</p>
+            <div class="starter__card__description__fa">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </article>
+          <article class="starter__card">
+            <div class="starter__card__description">
+              <h3 class="starter__card__description__name">
+                Millefeuille croustillant
+              </h3>
+              <p class="starter__card__description__ingredients">
+                Myrtilles et pâte d’amande
+              </p>
+            </div>
+            <p class="starter__card__description__price">23€</p>
+            <div class="starter__card__description__fa">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </article>
         </section>
-        <button></button>
+        <button class="button button--modifier">Commander</button>
       </div>
     </main>
 
@@ -123,7 +220,7 @@
           <a href="#"> Mentions légales </a>
         </li>
         <li class="footer__list__items">
-          <a href="#"> Contact </a>
+          <a href="mailto:contact@ohmyfood.com"> Contact </a>
         </li>
       </ul>
     </footer>
