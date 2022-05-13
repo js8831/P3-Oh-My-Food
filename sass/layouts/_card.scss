@@ -66,6 +66,9 @@
           margin: 0;
           padding-left: 15px;
           font-size: 17px;
+          @media (min-width:768px) {
+            font-size: 15px;
+          }
         }
       }
     }
@@ -95,22 +98,36 @@
   margin-bottom: 15px;
   background-color: $background-restaurant-description;
   box-shadow: 7px 7px 10px 0px $item-shadow;
+  @media (min-width:768px) {
+    width: 33.33%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
   &__description {
     &__name {
       padding-bottom: 5px;
       margin: 0px;
       font-size: 18px;
       font-weight: 700;
+      @media (min-width:768px) {
+        font-size: 10px;
+      } 
     }
     &__ingredients {
       margin: 0px;
       font-size: 15px;
+      @media (min-width:768px) {
+        font-size: 10px;
+      }
     }
     &__price{
       margin:0px;
       padding-right: 10px;
       font-size: 15px;
       font-weight: 800;
+      @media (min-width:768px) {
+        font-size: 10px;
+      }
     }
     &__fa{
       display: none;
