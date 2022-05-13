@@ -45,14 +45,14 @@
         background-color: $background-restaurant-description;
         border-radius: 0px 0px 14px 0px;
         font-size: x-large;
-        box-shadow: 7px 7px 10px 0px $shadow;
+        box-shadow: 7px 7px 10px 0px $item-shadow;
       }
       &__text {
         width: 80%;
         padding: 17px 0px;
         background-color: $background-restaurant-description;
         border-radius: 0px 0px 0px 14px;
-        box-shadow: 0px 7px 10px 0px $shadow;
+        box-shadow: 0px 7px 10px 0px $item-shadow;
         &__name {
           font-size: 18px;
           font-weight: 800;
@@ -89,15 +89,29 @@
 .starter__card {
   display: flex;
   justify-content: space-between;
-  border: 2px solid black;
+  align-items: flex-end;
+  border-radius: 15px;
+  padding: 13px 10px;
+  margin-bottom: 15px;
+  background-color: $background-restaurant-description;
+  box-shadow: 7px 7px 10px 0px $item-shadow;
   &__description {
     &__name {
+      padding-bottom: 5px;
       margin: 0px;
+      font-size: 18px;
+      font-weight: 700;
     }
     &__ingredients {
       margin: 0px;
+      font-size: 15px;
     }
-    &__price{}
+    &__price{
+      margin:0px;
+      padding-right: 10px;
+      font-size: 15px;
+      font-weight: 800;
+    }
     &__fa{
       display: none;
     }
