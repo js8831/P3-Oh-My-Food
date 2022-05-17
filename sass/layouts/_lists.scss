@@ -17,7 +17,10 @@
     border-radius: 25px;
     box-shadow: 0px 7px 10px $item-shadow;
     &:hover {
-      background-color: $color-primary;
+      background-color: lighten($color-primary, 35%);
+    }
+    &:hover .function__fa {
+      color: $color-primary;
     }
     @media (min-width: 768px) {
       width: 50%;
