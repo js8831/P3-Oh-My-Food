@@ -18,11 +18,21 @@ img {
   border-radius: 40px 40px 0px 0px;
   background-color: rgb(246, 246, 246);
 }
+@media (min-width: 768px) {
+  .main-bloc {
+    padding: 0px 65px 80px 65px;
+  }
+}
 
 .restaurant-title {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .restaurant-title {
+    justify-content: center;
+  }
 }
 .restaurant-title__name {
   margin: 30px 0px 0px 10px;
@@ -31,6 +41,11 @@ img {
   font-size: x-large;
   margin-right: 20px;
 }
+@media (min-width: 768px) {
+  .restaurant-title__fa {
+    margin: 0px 10px;
+  }
+}
 
 .starter-title {
   font-size: 17px;
@@ -38,9 +53,21 @@ img {
   padding-left: 5px;
   margin: 40px 0px 20px 0px;
 }
+@media (min-width: 768px) {
+  .starter-title {
+    text-align: center;
+  }
+}
 
 .background-container__img {
   width: 100%;
+}
+@media (min-width: 768px) {
+  .background-container__img {
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 
 .back-logo {
@@ -55,6 +82,12 @@ img {
 .underline {
   padding-bottom: 7px;
   border-bottom: 3px solid #99E2D0;
+}
+
+@media (min-width: 768px) {
+  .starter-container {
+    display: flex;
+  }
 }
 
 html {
@@ -85,6 +118,9 @@ html {
   cursor: pointer;
   box-shadow: 0px 7px 10px rgb(200, 200, 200);
 }
+.button:hover {
+  box-shadow: 0px 7px 10px #959595;
+}
 .button--modifier {
   margin-top: 50px;
   padding: 16px 50px;
@@ -112,7 +148,7 @@ html {
   margin: auto;
   padding: 20px 0px 10px 0px;
 }
-.nav__search__bar {
+.nav__search {
   background-color: rgb(236, 236, 236);
   margin-top: 5px;
   padding: 10px 0px 15px 0px;
@@ -126,7 +162,10 @@ html {
   font-weight: 700;
   background: none;
   width: 138px;
-  margin-left: 20px;
+  margin-left: 15px;
+}
+.nav__search__fa {
+  margin-right: 5px;
 }
 .nav__text {
   padding: 25px 0px 60px 0px;
@@ -166,7 +205,10 @@ html {
   box-shadow: 0px 7px 10px rgb(230, 230, 230);
 }
 .function__list:hover {
-  background-color: #9356DC;
+  background-color: #f2eafb;
+}
+.function__list:hover .function__fa {
+  color: #9356DC;
 }
 @media (min-width: 768px) {
   .function__list {
@@ -277,6 +319,11 @@ html {
   padding-left: 15px;
   font-size: 17px;
 }
+@media (min-width: 768px) {
+  .restaurant__card__description__text__name, .restaurant__card__description__text__neighbourhood {
+    font-size: 15px;
+  }
+}
 .restaurant__new {
   position: absolute;
   top: 12px;
@@ -300,15 +347,32 @@ html {
   background-color: white;
   box-shadow: 7px 7px 10px 0px rgb(230, 230, 230);
 }
+@media (min-width: 768px) {
+  .starter__card {
+    width: 33.33%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
 .starter__card__description__name {
   padding-bottom: 5px;
   margin: 0px;
   font-size: 18px;
   font-weight: 700;
 }
+@media (min-width: 768px) {
+  .starter__card__description__name {
+    font-size: 10px;
+  }
+}
 .starter__card__description__ingredients {
   margin: 0px;
   font-size: 15px;
+}
+@media (min-width: 768px) {
+  .starter__card__description__ingredients {
+    font-size: 10px;
+  }
 }
 .starter__card__description__price {
   margin: 0px;
@@ -316,8 +380,17 @@ html {
   font-size: 15px;
   font-weight: 800;
 }
+@media (min-width: 768px) {
+  .starter__card__description__price {
+    font-size: 10px;
+  }
+}
 .starter__card__description__fa {
   display: none;
+}
+.starter__card:hover > .starter__card__description__fa {
+  display: block;
+  color: red;
 }
 
 .footer {
