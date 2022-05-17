@@ -133,4 +133,9 @@
       display: none;
     }
   }
+  &:hover > .starter__card__description__fa {
+    display: block;
+    color:red;
+    
+  }
 }
