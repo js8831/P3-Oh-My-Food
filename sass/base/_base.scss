@@ -14,7 +14,9 @@ img {
   padding: 0px 10px 80px 10px;
   border-radius: 40px 40px 0px 0px;
   background-color: $background-main-page;
-  @media (min-width:768px) {
+  position: relative;
+  margin-top: -50px;
+  @media (min-width:992px) {
     padding: 0px 65px 80px 65px;
   }
 }
@@ -38,11 +40,11 @@ img {
   }
 }
 
-.starter-title {
+.menu__title {
   font-size: 17px;
   font-weight: 400;
   padding-left: 5px;
-  margin: 40px 0px 20px 0px;
+  margin: 40px 0px 0px 0px;
   @media (min-width:768px) {
     text-align: center;
   }
@@ -72,8 +74,21 @@ img {
     border-bottom: 3px solid $color-tertiary;
 }
 
-.starter-container{
+.menu__container{
   @media (min-width:768px) {
     display: flex;
+  }
+}
+
+.underline{
+  width:40px;
+  height: 1px;
+  background-color: $color-tertiary;
+  padding: 0;
+  margin: 5px 0px 13px 6px;
+  @media (min-width:768px) {
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 13px;
   }
 }
