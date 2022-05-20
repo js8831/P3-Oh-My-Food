@@ -12,6 +12,7 @@
     box-shadow: 0px 7px 10px $button-shadow;
     &:hover {
         box-shadow: 0px 7px 10px darken($button-shadow, 20%);
+        background: $background-button-hover;
     }
     &--modifier {
         margin-top: 50px;
