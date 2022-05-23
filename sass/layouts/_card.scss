@@ -34,6 +34,12 @@
       height: 180px;
       border-radius: 14px 14px 0px 0px;
       object-fit: cover;
+      &__2 {
+        object-position: 0px -145px;
+      }
+      &__4 {
+        object-position: 0px -50px;
+      }
     }
     &__description {
       display: flex;
@@ -46,6 +52,18 @@
         border-radius: 0px 0px 14px 0px;
         font-size: x-large;
         box-shadow: 7px 7px 10px 0px $item-shadow;
+        &__2 {
+          display: none;
+          background: $background-heart;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        &:hover > &__2 {
+          display: block;
+        }
+        &:hover > &__1 {
+          display: none;
+        }
       }
       &__text {
         width: 80%;
@@ -66,7 +84,7 @@
           margin: 0;
           padding-left: 15px;
           font-size: 17px;
-          @media (min-width:768px) {
+          @media (min-width: 768px) {
             font-size: 15px;
           }
         }
@@ -89,53 +107,66 @@
 
 /* LES AUTRES PAGES */
 
-.starter__card {
+.menu__card {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  /* align-items: flex-end; */
   border-radius: 15px;
-  padding: 13px 10px;
+  /* padding: 13px 10px; */
   margin-bottom: 15px;
   background-color: $background-restaurant-description;
   box-shadow: 7px 7px 10px 0px $item-shadow;
-  @media (min-width:768px) {
+  cursor: pointer;
+  @media (min-width: 768px) {
     width: 33.33%;
     margin-left: 10px;
     margin-right: 10px;
   }
   &__description {
+    width: 74%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     &__name {
-      padding-bottom: 5px;
+      padding: 13px 0px 5px 10px;
       margin: 0px;
       font-size: 18px;
       font-weight: 700;
-      @media (min-width:768px) {
-        font-size: 10px;
-      } 
     }
     &__ingredients {
+      padding: 0px 0px 13px 10px;
       margin: 0px;
       font-size: 15px;
-      @media (min-width:768px) {
-        font-size: 10px;
-      }
-    }
-    &__price{
-      margin:0px;
-      padding-right: 10px;
-      font-size: 15px;
-      font-weight: 800;
-      @media (min-width:768px) {
-        font-size: 10px;
-      }
-    }
-    &__fa{
-      display: none;
     }
   }
-  &:hover > .starter__card__description__fa {
-    display: block;
-    color:red;
-    
+  &__price {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0px 20px 13px 0px;
+    font-size: 15px;
+    font-weight: 800;
+    width: 13%;
   }
+  &__fa {
+    display: none;
+    width: 17%;
+    font-size: large;
+    /* height: 100%; */
+    background-color: $color-tertiary;
+    border-radius: 0px 15px 15px 0px;
+    color: white;
+  }
+  &:hover > .menu__card__fa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover > .fa-circle-check {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.fa-circle-check {
+  transition: transform 1s;
 }
