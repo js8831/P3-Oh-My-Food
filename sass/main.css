@@ -215,6 +215,7 @@ html {
   }
 }
 .function__list {
+  cursor: pointer;
   display: flex;
   align-items: center;
   margin-bottom: 25px;
@@ -303,19 +304,22 @@ html {
   border-radius: 14px 14px 0px 0px;
   -o-object-fit: cover;
      object-fit: cover;
-}
-.restaurant__card__photo__2 {
-  -o-object-position: 0px -145px;
-     object-position: 0px -145px;
-}
-.restaurant__card__photo__4 {
-  -o-object-position: 0px -50px;
-     object-position: 0px -50px;
+  /*
+  &__2 {
+    object-position: 0px -145px;
+  }
+  &__4 {
+    object-position: 0px -50px;
+  }
+  Mettre des medias queries ??? */
 }
 .restaurant__card__description {
   display: flex;
 }
 .restaurant__card__description__fa {
+  opacity: 1;
+  /* est ce necessaire l'opacity ici ? */
+  position: relative;
   width: 20%;
   display: flex;
   justify-content: center;
@@ -325,18 +329,27 @@ html {
   font-size: x-large;
   box-shadow: 7px 7px 10px 0px rgb(230, 230, 230);
 }
+.restaurant__card__description__fa__1 {
+  position: absolute;
+  transition: all 0.4s;
+}
+.restaurant__card__description__fa__1:hover {
+  opacity: 0;
+}
 .restaurant__card__description__fa__2 {
-  display: none;
+  position: absolute;
+  /* fonctionne sans, est ce necessaire de plus je n'ai pas eu
+  centrer bizarrement */
+  opacity: 0;
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: all 0.4s;
 }
-.restaurant__card__description__fa:hover > .restaurant__card__description__fa__2 {
-  display: block;
-}
-.restaurant__card__description__fa:hover > .restaurant__card__description__fa__1 {
-  display: none;
+.restaurant__card__description__fa__2:hover {
+  opacity: 1;
+  /* transform:scale(0.7); ne fonctionne pas ! */
 }
 .restaurant__card__description__text {
   width: 80%;
@@ -421,24 +434,27 @@ html {
   width: 13%;
 }
 .menu__card__fa {
-  display: none;
-  width: 17%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0%;
   font-size: large;
   /* height: 100%; */
   background-color: #99E2D0;
   border-radius: 0px 15px 15px 0px;
   color: white;
+  transition: all 0.5s;
 }
 .menu__card:hover > .menu__card__fa {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 17%;
 }
-.menu__card:hover > .menu__card__fa:hover > .fa-circle-check {
+.menu__card:hover > .menu__card__fa .fa-circle-check {
   transform: rotate(360deg);
+  color: white;
 }
 
 .fa-circle-check {
+  color: transparent;
   transition: transform 1s;
 }
 
