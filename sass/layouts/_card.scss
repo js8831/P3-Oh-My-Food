@@ -34,16 +34,21 @@
       height: 180px;
       border-radius: 14px 14px 0px 0px;
       object-fit: cover;
+      /*
       &__2 {
         object-position: 0px -145px;
       }
       &__4 {
         object-position: 0px -50px;
       }
+      Mettre des medias queries ??? */
     }
     &__description {
       display: flex;
       &__fa {
+        opacity: 1;
+        /* est ce necessaire l'opacity ici ? */
+        position: relative;
         width: 20%;
         display: flex;
         justify-content: center;
@@ -52,17 +57,26 @@
         border-radius: 0px 0px 14px 0px;
         font-size: x-large;
         box-shadow: 7px 7px 10px 0px $item-shadow;
+        &__1 {
+          position: absolute;
+          transition: all 0.4s;
+          &:hover {
+            opacity: 0;
+          }
+        }
         &__2 {
-          display: none;
+          position: absolute;
+          /* fonctionne sans, est ce necessaire de plus je n'ai pas eu
+          centrer bizarrement */
+          opacity: 0;
           background: $background-heart;
           background-clip: text;
           -webkit-text-fill-color: transparent;
-        }
-        &:hover > &__2 {
-          display: block;
-        }
-        &:hover > &__1 {
-          display: none;
+          transition: all 0.4s;
+          &:hover {
+            opacity: 1;
+            /* transform:scale(0.7); ne fonctionne pas ! */
+          }
         }
       }
       &__text {
@@ -149,24 +163,27 @@
     width: 13%;
   }
   &__fa {
-    display: none;
-    width: 17%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0%;
     font-size: large;
     /* height: 100%; */
     background-color: $color-tertiary;
     border-radius: 0px 15px 15px 0px;
     color: white;
+    transition: all 0.5s
   }
   &:hover > .menu__card__fa {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &:hover > .fa-circle-check {
+    width: 17%;
+    .fa-circle-check {
       transform: rotate(360deg);
+      color: white;
     }
   }
 }
 
 .fa-circle-check {
+  color: transparent;
   transition: transform 1s;
 }
