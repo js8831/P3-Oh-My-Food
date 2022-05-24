@@ -1,4 +1,26 @@
 @charset "UTF-8";
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -40,6 +62,10 @@ img {
   margin: 30px 0px 0px 10px;
 }
 .restaurant-title__fa {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: x-large;
   margin-right: 20px;
 }
@@ -47,6 +73,25 @@ img {
   .restaurant-title__fa {
     margin: 0px 10px;
   }
+}
+.restaurant-title__fa__1 {
+  opacity: 1;
+  transition: all 0.4s;
+}
+.restaurant-title__fa__1:hover {
+  opacity: 0;
+}
+.restaurant-title__fa__2 {
+  position: absolute;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transition: all 0.4s;
+}
+.restaurant-title__fa__2:hover {
+  opacity: 1;
 }
 
 .menu__title {
@@ -86,6 +131,10 @@ img {
   border-bottom: 3px solid #99E2D0;
 }
 
+.menu__container {
+  -webkit-animation: appear 1s;
+          animation: appear 1s;
+}
 @media (min-width: 768px) {
   .menu__container {
     display: flex;
@@ -311,14 +360,12 @@ html {
   &__4 {
     object-position: 0px -50px;
   }
-  Mettre des medias queries ??? */
+  Mettre des medias queries ??? pourcentages, top center */
 }
 .restaurant__card__description {
   display: flex;
 }
 .restaurant__card__description__fa {
-  opacity: 1;
-  /* est ce necessaire l'opacity ici ? */
   position: relative;
   width: 20%;
   display: flex;
@@ -338,8 +385,6 @@ html {
 }
 .restaurant__card__description__fa__2 {
   position: absolute;
-  /* fonctionne sans, est ce necessaire de plus je n'ai pas eu
-  centrer bizarrement */
   opacity: 0;
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
@@ -349,7 +394,6 @@ html {
 }
 .restaurant__card__description__fa__2:hover {
   opacity: 1;
-  /* transform:scale(0.7); ne fonctionne pas ! */
 }
 .restaurant__card__description__text {
   width: 80%;
@@ -392,9 +436,7 @@ html {
 .menu__card {
   display: flex;
   justify-content: space-between;
-  /* align-items: flex-end; */
   border-radius: 15px;
-  /* padding: 13px 10px; */
   margin-bottom: 15px;
   background-color: white;
   box-shadow: 7px 7px 10px 0px rgb(230, 230, 230);
@@ -402,7 +444,7 @@ html {
 }
 @media (min-width: 768px) {
   .menu__card {
-    width: 33.33%;
+    width: calc(33.33% - 20px);
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -412,17 +454,25 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-right: 25px;
+  overflow: hidden;
 }
 .menu__card__description__name {
   padding: 13px 0px 5px 10px;
   margin: 0px;
   font-size: 18px;
   font-weight: 700;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu__card__description__ingredients {
   padding: 0px 0px 13px 10px;
   margin: 0px;
   font-size: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu__card__price {
   display: flex;
@@ -439,22 +489,21 @@ html {
   align-items: center;
   width: 0%;
   font-size: large;
-  /* height: 100%; */
   background-color: #99E2D0;
   border-radius: 0px 15px 15px 0px;
   color: white;
+  overflow: hidden;
   transition: all 0.5s;
 }
 .menu__card:hover > .menu__card__fa {
   width: 17%;
+  /* en reprenant de la place, le fa redevient visible car il ne déborde pas */
 }
 .menu__card:hover > .menu__card__fa .fa-circle-check {
   transform: rotate(360deg);
-  color: white;
 }
 
 .fa-circle-check {
-  color: transparent;
   transition: transform 1s;
 }
 

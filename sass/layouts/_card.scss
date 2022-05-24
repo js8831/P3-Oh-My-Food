@@ -41,13 +41,11 @@
       &__4 {
         object-position: 0px -50px;
       }
-      Mettre des medias queries ??? */
+      Mettre des medias queries ??? pourcentages, top center */
     }
     &__description {
       display: flex;
       &__fa {
-        opacity: 1;
-        /* est ce necessaire l'opacity ici ? */
         position: relative;
         width: 20%;
         display: flex;
@@ -66,8 +64,6 @@
         }
         &__2 {
           position: absolute;
-          /* fonctionne sans, est ce necessaire de plus je n'ai pas eu
-          centrer bizarrement */
           opacity: 0;
           background: $background-heart;
           background-clip: text;
@@ -75,7 +71,6 @@
           transition: all 0.4s;
           &:hover {
             opacity: 1;
-            /* transform:scale(0.7); ne fonctionne pas ! */
           }
         }
       }
@@ -124,15 +119,13 @@
 .menu__card {
   display: flex;
   justify-content: space-between;
-  /* align-items: flex-end; */
   border-radius: 15px;
-  /* padding: 13px 10px; */
   margin-bottom: 15px;
   background-color: $background-restaurant-description;
   box-shadow: 7px 7px 10px 0px $item-shadow;
   cursor: pointer;
   @media (min-width: 768px) {
-    width: 33.33%;
+    width: calc(33.33% - 20px);
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -141,16 +134,25 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-right: 25px;
+    overflow: hidden;
+
     &__name {
       padding: 13px 0px 5px 10px;
       margin: 0px;
       font-size: 18px;
       font-weight: 700;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
     &__ingredients {
       padding: 0px 0px 13px 10px;
       margin: 0px;
       font-size: 15px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
   }
   &__price {
@@ -168,22 +170,21 @@
     align-items: center;
     width: 0%;
     font-size: large;
-    /* height: 100%; */
     background-color: $color-tertiary;
     border-radius: 0px 15px 15px 0px;
     color: white;
-    transition: all 0.5s
+    overflow: hidden;
+    transition: all 0.5s;
   }
   &:hover > .menu__card__fa {
     width: 17%;
+    /* en reprenant de la place, le fa redevient visible car il ne déborde pas */
     .fa-circle-check {
       transform: rotate(360deg);
-      color: white;
     }
   }
 }
 
 .fa-circle-check {
-  color: transparent;
   transition: transform 1s;
 }
