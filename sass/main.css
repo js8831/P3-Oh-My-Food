@@ -226,6 +226,11 @@ html {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 768px) {
+  .function {
+    padding: 25px 20px 40px 20px;
+  }
+}
 .function__title {
   margin: 25px 0px 25px 0px;
 }
@@ -234,7 +239,13 @@ html {
     text-align: center;
   }
 }
-.function__list {
+@media (min-width: 768px) {
+  .function__list {
+    display: flex;
+    justify-content: center;
+  }
+}
+.function__list__item {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -243,18 +254,17 @@ html {
   border-radius: 25px;
   box-shadow: 0px 7px 10px rgb(230, 230, 230);
 }
-.function__list:hover {
+.function__list__item:hover {
   background-color: #f2eafb;
 }
-.function__list:hover .function__fa {
+.function__list__item:hover .function__fa {
   color: #9356DC;
 }
 @media (min-width: 768px) {
-  .function__list {
-    width: 50%;
+  .function__list__item {
+    width: 33.33%;
     max-width: 400px;
-    margin: auto;
-    margin-bottom: 20px;
+    margin: 0px 15px 20px 15px;
   }
 }
 .function__number {
