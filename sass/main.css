@@ -422,6 +422,13 @@ html {
     margin-right: 10px;
   }
 }
+@media (min-width: 768px) {
+  .menu__card__1 {
+    width: calc(25% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
 .menu__card__description {
   width: 74%;
   display: flex;

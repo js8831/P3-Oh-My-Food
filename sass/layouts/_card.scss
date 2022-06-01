@@ -124,11 +124,18 @@
   background-color: $background-restaurant-description;
   box-shadow: 7px 7px 10px 0px $item-shadow;
   cursor: pointer;
-   animation: appear 2s;
+  animation: appear 2s;
   @media (min-width: 768px) {
     width: calc(33.33% - 20px);
     margin-left: 10px;
     margin-right: 10px;
+  }
+  &__1 {
+    @media (min-width: 768px) {
+      width: calc(25% - 20px);
+      margin-left: 10px;
+      margin-right: 10px;
+    }
   }
   &__description {
     width: 74%;
