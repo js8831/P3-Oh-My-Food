@@ -1,11 +1,26 @@
 @keyframes appear {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    transform: translatey(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translatey(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes hidden {
+  0% {
+    transform: scaley(1);
+  }
+
+  100% {
+    transform: scaley(0);
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
 }

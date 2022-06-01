@@ -124,6 +124,7 @@
   background-color: $background-restaurant-description;
   box-shadow: 7px 7px 10px 0px $item-shadow;
   cursor: pointer;
+   animation: appear 2s;
   @media (min-width: 768px) {
     width: calc(33.33% - 20px);
     margin-left: 10px;
@@ -174,7 +175,7 @@
     border-radius: 0px 15px 15px 0px;
     color: white;
     overflow: hidden;
-    transition: all 0.5s;
+    transition: all 400ms;
   }
   &:hover > .menu__card__fa {
     width: 17%;
