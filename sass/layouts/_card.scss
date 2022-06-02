@@ -132,7 +132,7 @@
   }
   &__1 {
     @media (min-width: 768px) {
-      width: calc(25% - 20px);
+      width: calc(50% - 20px);
       margin-left: 10px;
       margin-right: 10px;
     }
@@ -188,11 +188,8 @@
     width: 17%;
     /* en reprenant de la place, le fa redevient visible car il ne déborde pas */
     .fa-circle-check {
-      transform: rotate(360deg);
+      animation: rotate 400ms linear;
     }
   }
 }
 
-.fa-circle-check {
-  transition: transform 1s;
-}
