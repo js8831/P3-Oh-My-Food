@@ -38,11 +38,13 @@
 @-webkit-keyframes rotate {
   to {
     transform: rotate(360deg);
+    /* from =0 par défaut */
   }
 }
 @keyframes rotate {
   to {
     transform: rotate(360deg);
+    /* from =0 par défaut */
   }
 }
 * {
@@ -117,14 +119,14 @@ img {
 }
 .loader__spinner {
   position: absolute;
-  inset: 50% 50%;
   color: #99E2D0;
   font-size: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-animation: rotate 2500ms linear infinite;
-          animation: rotate 2500ms linear infinite;
+  inset: 50% 50%;
+  -webkit-animation: rotate 2500ms linear;
+          animation: rotate 2500ms linear;
 }
 
 html {
@@ -484,12 +486,13 @@ html {
   color: white;
   overflow: hidden;
   transition: all 400ms;
+  /* sur width 17% */
 }
-.menu__card:hover > .menu__card__fa {
+.menu__card:hover .menu__card__fa {
   width: 17%;
   /* en reprenant de la place, le fa redevient visible car il ne déborde pas */
 }
-.menu__card:hover > .menu__card__fa .fa-circle-check {
+.menu__card:hover .menu__card__fa .fa-circle-check {
   transform: rotate(360deg);
 }
 

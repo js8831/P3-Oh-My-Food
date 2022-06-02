@@ -182,9 +182,9 @@
     border-radius: 0px 15px 15px 0px;
     color: white;
     overflow: hidden;
-    transition: all 400ms;
+    transition: all 400ms; /* sur width 17% */
   }
-  &:hover > .menu__card__fa {
+  &:hover .menu__card__fa {
     width: 17%;
     /* en reprenant de la place, le fa redevient visible car il ne déborde pas */
     .fa-circle-check {
