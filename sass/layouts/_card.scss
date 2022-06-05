@@ -34,14 +34,6 @@
       height: 180px;
       border-radius: 14px 14px 0px 0px;
       object-fit: cover;
-      /*
-      &__2 {
-        object-position: 0px -145px;
-      }
-      &__4 {
-        object-position: 0px -50px;
-      }
-      Mettre des medias queries ??? pourcentages, top center */
     }
     &__description {
       display: flex;
@@ -192,4 +184,3 @@
     }
   }
 }
-
