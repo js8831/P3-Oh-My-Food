@@ -114,6 +114,7 @@ img {
   width: 100vw;
   -webkit-animation: hidden 0.5s 1800ms;
           animation: hidden 0.5s 1800ms;
+  /* durée ensuite délai */
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   transform-origin: top;
@@ -337,14 +338,6 @@ html {
   border-radius: 14px 14px 0px 0px;
   -o-object-fit: cover;
      object-fit: cover;
-  /*
-  &__2 {
-    object-position: 0px -145px;
-  }
-  &__4 {
-    object-position: 0px -50px;
-  }
-  Mettre des medias queries ??? pourcentages, top center */
 }
 .restaurant__card__description {
   display: flex;
@@ -618,6 +611,4 @@ html {
 }
 .footer__list__items a {
   color: white;
-}
-
-/* Attention à l'ordre dans main scss (à revoir). *//*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
