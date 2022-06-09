@@ -944,7 +944,6 @@ html {
 .footer__list__items__link .fa-handshake-angle {
   font-size: small;
   width: 14px;
-  /* ::before dans inspecter ?? */
 }
 .footer__list__items__link p {
   margin: 0px 0px 0px 10px;
